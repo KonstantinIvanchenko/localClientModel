@@ -2,24 +2,31 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-<meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Pragma" content="no-cache">
     <title>Title</title>
     <script src="static/jquery-3.3.1.min.js"></script>
     <script type="text/javascript" src="static/socket.io.min.js"></script>
     <script src="static/Chart.bundle.js"></script>
     <script src="static/js/application.js"></script>
-
+<style>
+.container-chart {
+    width: 1000px;
+    height:600px
+}
+</style>
 </head>
+
 <body>
 
 <div class="container">
   <div class="jumbotron">
     <h1>RT model of sensor data</h1>
   </div>
-</div>
 
-<canvas id="myChart_load" width="200" height="200"></canvas>
-<canvas id="myChart_virtMemUsed" width="200" height="200"></canvas>
+<div class="container-chart">
+	<canvas id="myChart_load" width="300" height="100"></canvas>
+	<canvas id="myChart_virtMemUsed" width="300" height="100"></canvas>
+</div>
 
 <script>
 
@@ -27,3 +34,8 @@
 
 </body>
 </html>
+
+.container-chart {
+    width: 1000px;
+    height:600px
+}

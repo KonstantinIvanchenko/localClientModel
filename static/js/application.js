@@ -49,7 +49,9 @@ $(document).ready(function(){
                       }
                   }]
               },
-              animation: false
+              animation: false,
+              responsive: true, 
+              maintainAspectRatio: true
           }
       });
 
@@ -87,7 +89,9 @@ $(document).ready(function(){
                       }
                   }]
               },
-              animation: false
+              animation: false,
+              responsive: true, 
+              maintainAspectRatio: true
           }
       });     
   
