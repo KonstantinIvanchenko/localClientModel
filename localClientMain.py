@@ -3,14 +3,14 @@ from lib import argparser as marg
 from enum import Enum
 
 import pandas as pd
-import os
-from time import sleep
-
 import numpy as np
 
 from flask import Flask, render_template
 from flask_socketio import SocketIO, emit
+
 from threading import Thread, Event
+import os
+from time import sleep
 
 #Filename
 Filename = 'SensorDataOut.csv'
@@ -54,6 +54,7 @@ class DataSenderThread(Thread):
 
             dataset = pd.read_csv(Filename)
             total_rows = dataset.shape[0]
+            #data is written without header information. Therefore use iloc
             index = dataset.iloc[total_rows-100:total_rows,1].astype('int32').tolist()
             values_cputemp = dataset.iloc[total_rows-100:total_rows,2].astype('int32').tolist()
             values_cpuload = dataset.iloc[total_rows-100:total_rows,3].astype('int32').tolist()
